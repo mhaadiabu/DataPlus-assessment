@@ -13,7 +13,7 @@ interface Product {
 }
 
 export default function Home() {
-	const [selected, setSelected] = useState<Product | null>(null);
+	const [selected, setSelected] = useState<Product>('');
 
 	// console.log(selected); // Optional chaining to avoid errors
 

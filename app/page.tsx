@@ -8,12 +8,12 @@ import { useState } from 'react';
 
 // Define the Product interface
 interface Product {
-	offer: string;
-	price: string | number; // assuming price is a string in your config
+	offer: string | '';
+	price: string | ''; // assuming price is a string in your config
 }
 
 export default function Home() {
-	const [selected, setSelected] = useState<Product | null>(null);
+	const [selected, setSelected] = useState<Product | ''>('');
 
 	console.log(selected?.offer); // Optional chaining to avoid errors
 

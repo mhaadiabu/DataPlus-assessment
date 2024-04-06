@@ -17,7 +17,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`{openSans.className} min-h-screen antialiased`}>
-				<main className='bg-slate-100 w-screen-xl mx-0 flex-grow p-6 sm:p-8 md:p-12 lg:p-20'>
+				<main className='bg-slate-50 w-full min-h-screen mx-0 flex-grow p-6 sm:p-8 md:p-12 lg:p-20'>
 					{children}
 				</main>
 			</body>

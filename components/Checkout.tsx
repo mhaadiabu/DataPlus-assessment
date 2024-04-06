@@ -1,11 +1,10 @@
 import { Fragment, useState, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import dynamic from 'next/dynamic';
 
 interface CheckoutProps {
 	selectedProductPrice: number | undefined;
 	selectedProductOffer: string | undefined;
-	quantity: number;
+	quantity: number | any;
 }
 
 const Checkout = ({
@@ -21,11 +20,15 @@ const Checkout = ({
 		const totalPrice = selectedProductPrice
 			? selectedProductPrice * quantity
 			: null;
-		setMessageHead(selectedProductOffer ? 'Success!' : 'Warning!');
+		setMessageHead(
+			selectedProductOffer && selectedProductPrice && quantity
+				? 'Success!'
+				: 'Warning!'
+		);
 		setMessage(
-			selectedProductOffer
+			selectedProductOffer && selectedProductPrice && quantity
 				? `You have successfully purchased ${quantity} of ${selectedProductOffer} for GHS ${totalPrice}.`
-				: 'Please select an offer.'
+				: 'Please select a valid offer.'
 		);
 	}, [selectedProductPrice, selectedProductOffer, quantity]);
 
@@ -37,11 +40,14 @@ const Checkout = ({
 		setIsOpen(true);
 	};
 
+	const buttonClasses =
+		'inline-flex justify-center rounded-lg border-transparent bg-slate-800 hover:bg-slate-700 px-4 py-2 text-sm font-medium text-slate-50 focus:outline-none focus-visible:ring-slate-800 focus-visible:ring-offset-2 max-sm:w-full';
+
 	return (
 		<section className='container max-w-7xl'>
 			<button
 				onClick={openModal}
-				className='text-sm bg-slate-800 hover-bg-slate-700 text-slate-50 font-semibold py-2 px-4 rounded-md mt-4 uppercase'
+				className={buttonClasses}
 			>
 				Checkout
 			</button>
@@ -81,7 +87,7 @@ const Checkout = ({
 								<Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
 									<Dialog.Title
 										as='h3'
-										className='text-lg font-medium leading-6 text-slate-900'
+										className='text-lg font-bold leading-6 text-slate-900'
 									>
 										{messageHead}
 									</Dialog.Title>
@@ -92,7 +98,7 @@ const Checkout = ({
 										<button
 											type='button'
 											onClick={closeModal}
-											className='inline-flex justify-center rounded-md border-transparent bg-slate-800 hover:bg-slate-700 px-4 py-2 text-sm font-medium text-slate-50 focus:outline-none focus-visible:ring-slate-800 focus-visible:ring-offset-2'
+											className={`{buttonClasses} mt-4`}
 										>
 											Success
 										</button>

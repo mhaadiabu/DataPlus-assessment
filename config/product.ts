@@ -23,8 +23,8 @@ export const productConfig = {
 			offer: '100 units',
 		},
 		{
-			price: 20,
-			offer: '200 units',
+			price: 30,
+			offer: '200 Units Airtime + 1.5GB Data Bundle (Combo option)',
 		},
 	],
 
@@ -51,7 +51,7 @@ export const productConfig = {
 		},
 		{
 			price: 30,
-			offer: '3.2GB',
+			offer: '200 Units Airtime + 1.5GB Data Bundle (Combo option)',
 		},
 	],
 };

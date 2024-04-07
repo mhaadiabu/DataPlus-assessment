@@ -27,7 +27,7 @@ const Checkout = ({
 		);
 		setMessage(
 			selectedProductOffer && selectedProductPrice && quantity
-				? `You have successfully purchased ${quantity} of ${selectedProductOffer} for GHS ${totalPrice}.`
+				? `You have successfully purchased ${quantity} of ${selectedProductOffer} offer for GHS ${totalPrice}.`
 				: 'Please select a valid offer.'
 		);
 	}, [selectedProductPrice, selectedProductOffer, quantity]);
@@ -47,7 +47,7 @@ const Checkout = ({
 		<section className='container max-w-7xl'>
 			<button
 				onClick={openModal}
-				className={buttonClasses}
+				className={`{buttonClasses} mt-4`}
 			>
 				Checkout
 			</button>
@@ -98,9 +98,9 @@ const Checkout = ({
 										<button
 											type='button'
 											onClick={closeModal}
-											className={`{buttonClasses} mt-4`}
+											className={buttonClasses}
 										>
-											Success
+											Got it, thanks!
 										</button>
 									</div>
 								</Dialog.Panel>

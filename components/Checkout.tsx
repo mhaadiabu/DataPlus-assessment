@@ -4,7 +4,7 @@ import { Dialog, Transition } from '@headlessui/react';
 interface CheckoutProps {
 	selectedProductPrice: number | undefined;
 	selectedProductOffer: string | undefined;
-	quantity: number | any;
+	quantity: number;
 }
 
 const Checkout = ({

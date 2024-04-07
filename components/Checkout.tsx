@@ -4,7 +4,7 @@ import { Dialog, Transition } from '@headlessui/react';
 interface CheckoutProps {
 	selectedProductPrice: number | undefined;
 	selectedProductOffer: string | undefined;
-	quantity: number;
+	quantity: number | any;
 }
 
 const Checkout = ({
@@ -28,7 +28,9 @@ const Checkout = ({
 		setMessage(
 			selectedProductOffer && selectedProductPrice && quantity
 				? `You have successfully purchased ${quantity} of ${selectedProductOffer} offer for GHS ${totalPrice}.`
-				: 'Please select a valid offer.'
+				: !quantity
+								? 'Please enter quantity.'
+								: 'Please select an offer.'
 		);
 	}, [selectedProductPrice, selectedProductOffer, quantity]);
 

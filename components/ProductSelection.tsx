@@ -13,7 +13,7 @@ interface Product {
 
 const ProductSelection = () => {
 	const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-	const [quantity, setQuantity] = useState<number>(0);
+	const [quantity, setQuantity] = useState<number | string>('');
 	const price = selectedProduct?.price;
 	const offer = selectedProduct?.offer;
 

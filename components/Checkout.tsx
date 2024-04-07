@@ -28,9 +28,9 @@ const Checkout = ({
 		setMessage(
 			selectedProductOffer && selectedProductPrice && quantity
 				? `You have successfully purchased ${quantity} of ${selectedProductOffer} offer for GHS ${totalPrice}.`
-				: !quantity
-								? 'Please enter quantity.'
-								: 'Please select an offer.'
+				: !selectedProductOffer
+								? 'Please select an offer.'
+								: 'Please enter quantity.'
 		);
 	}, [selectedProductPrice, selectedProductOffer, quantity]);
 

@@ -47,7 +47,7 @@ const Checkout = ({
 		<section className='container max-w-7xl'>
 			<button
 				onClick={openModal}
-				className={`{buttonClasses} mt-4`}
+				className={`${buttonClasses} mt-4`}
 			>
 				Checkout
 			</button>

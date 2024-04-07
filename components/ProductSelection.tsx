@@ -13,7 +13,7 @@ interface Product {
 
 const ProductSelection = () => {
 	const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-	const [quantity, setQuantity] = useState<number | string>('');
+	const [quantity, setQuantity] = useState<number>(0);
 	const price = selectedProduct?.price;
 	const offer = selectedProduct?.offer;
 
@@ -40,8 +40,8 @@ const ProductSelection = () => {
 						id='quantity'
 						value={quantity}
 						onChange={(e) => setQuantity(parseInt(e.target.value))}
-						placeholder='Enter your desired quantity...'
-						className='border border-slate-500 text-slate-900 placeholder:text-slate-500 rounded-lg px-4 py-2 w-full'
+						placeholder='Enter desired quantity...'
+						className='border border-slate-500 text-slate-900 placeholder:text-slate-500 placeholder:text-sm rounded-lg px-4 py-2 w-full'
 					/>
 				</div>
 				<Checkout

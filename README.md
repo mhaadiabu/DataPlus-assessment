@@ -1,4 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Overview
+
+This mini-shop allows users to select from six different airtime and data bundle options, input their desired quantity, and proceed to checkout. Upon checkout, a summary of the selected product and quantity is displayed via an alert.
+
+## Features
+
+- Product options displayed as clickable buttons/cards
+- Selection and quantity input fields
+- Checkout button with summary alert
+- Clean and intuitive UI using Tailwind CSS
+- Structred components and simple state management using Next.js
+
+## Tech Stack
+
+- ![Static Badge](https://img.shields.io/badge/Next.js-%23000000?style=flat&logo=nextdotjs&logoColor=white) Next.js
+- ![Static Badge](https://img.shields.io/badge/Tailwind%20CSS-%2306B6D4?style=flat&logo=tailwindcss&logoColor=white) Tailwind CSS
+- ![Static Badge](https://img.shields.io/badge/TypeScript-%233178C6?style=flat&logo=typescript&logoColor=white) TypeScript
+
+## Deployment
+
+- Live demo: [https://dataplus-assessment.netlify.app/]
 
 ## Getting Started
 

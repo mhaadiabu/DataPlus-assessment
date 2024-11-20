@@ -12,9 +12,9 @@ This mini-shop allows users to select from six different airtime and data bundle
 
 ## Tech Stack
 
-- ![Static Badge](https://img.shields.io/badge/Next.js-%23000000?style=flat&logo=nextdotjs&logoColor=white) Next.js
-- ![Static Badge](https://img.shields.io/badge/Tailwind%20CSS-%2306B6D4?style=flat&logo=tailwindcss&logoColor=white) Tailwind CSS
-- ![Static Badge](https://img.shields.io/badge/TypeScript-%233178C6?style=flat&logo=typescript&logoColor=white) TypeScript
+- Next.js
+- Tailwind CSS
+- TypeScript
 
 ## Deployment
 
